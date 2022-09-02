@@ -1,11 +1,10 @@
 # workflow-test
 
-[![build-publish](https://github.com/muhamadto/workflow-test/actions/workflows/ci.yml/badge.svg)](https://github.com/muhamadto/workflow-test/actions/workflows/ci.yml)
+[![build](https://github.com/muhamadto/workflow-test/actions/workflows/build.yml/badge.svg)](https://github.com/muhamadto/workflow-test/actions/workflows/build.yml)
 [![CodeQL](https://github.com/muhamadto/workflow-test/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/muhamadto/workflow-test/actions/workflows/codeql-analysis.yml)
+[![publish](https://github.com/muhamadto/workflow-test/actions/workflows/publish.yml/badge.svg?branch=main&event=release)](https://github.com/muhamadto/workflow-test/actions/workflows/publish.yml)
 
-forked
-from [masahirompp/workflow-test](https://github.com/masahirompp/workflow-test)
-. Please
+forked from [masahirompp/workflow-test](https://github.com/masahirompp/workflow-test). Please
 find [copyright notice and license](https://github.com/masahirompp/aws-cdk-webpack-lambda-function/blob/master/LICENSE)
 in the original repository.
 
