@@ -6,47 +6,25 @@ on:
     branches: [ main ]
 
 jobs:
-  test-ubuntu:
+  analyze:
+    name: Analyze
     runs-on: ubuntu-latest
     permissions:
+      actions: read
       contents: read
-      packages: write
+      security-events: write
     strategy:
+      fail-fast: false
       matrix:
-        node-version: [ 14.x, 15.x, 16.x ]
+        language: [ 'javascript' ]
     steps:
-      - name: Check out repository code
+      - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Configure git
-        run: |
-          git config user.email "muhamadto@gmail.com"
-          git config user.name "MuHamadto"
-      - name: Cache node modules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          registry-url: https://npm.pkg.github.com/
-          scope: '@muhamadto'
-      - run: npm install --frozen-lockfile
-      - run: npm run build
-      - run: npm run test
-      #      - run: npm version patch -m "Release %s 📣"
-      #      - run: git push
-      - run: |
-          echo @muhamadto:https://npm.pkg.github.com/ > ~/.npmrc
-          echo '//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}' >> ~/.npmrc
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npm publish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          languages: ${{ matrix.language }}
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v2
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
