@@ -1,5 +1,5 @@
 {
-  "name": "@muhamadto/aws-cdk2-webpack-lambda-function",
+  "name": "@muhamadto/workflow-test",
   "version": "0.3.0",
   "description": "This library provides constructs for Node.js Lambda function bundled using webpack.",
   "main": "lib/index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/muhamadto/aws-cdk2-webpack-lambda-function.git"
+    "url": "git+https://github.com/muhamadto/workflow-test.git"
   },
   "keywords": [
     "aws-cdk",
@@ -22,9 +22,9 @@
   "author": "Muhammad Hamadto",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/issues"
+    "url": "https://github.com/muhamadto/workflow-test/issues"
   },
-  "homepage": "https://github.com/muhamadto/aws-cdk2-webpack-lambda-function#readme",
+  "homepage": "https://github.com/muhamadto/workflow-test#readme",
   "registry": "https://npm.pkg.github.com",
   "peerDependencies": {
     "aws-cdk-lib": "*",

@@ -1,10 +1,10 @@
-# aws-cdk2-webpack-lambda-function
+# workflow-test
 
-[![build-publish](https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/actions/workflows/ci.yml/badge.svg)](https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/actions/workflows/codeql-analysis.yml)
+[![build-publish](https://github.com/muhamadto/workflow-test/actions/workflows/ci.yml/badge.svg)](https://github.com/muhamadto/workflow-test/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/muhamadto/workflow-test/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/muhamadto/workflow-test/actions/workflows/codeql-analysis.yml)
 
 forked
-from [masahirompp/aws-cdk2-webpack-lambda-function](https://github.com/masahirompp/aws-cdk2-webpack-lambda-function)
+from [masahirompp/workflow-test](https://github.com/masahirompp/workflow-test)
 . Please
 find [copyright notice and license](https://github.com/masahirompp/aws-cdk-webpack-lambda-function/blob/master/LICENSE)
 in the original repository.
@@ -16,8 +16,8 @@ This library provides AWS CDK constructs for Lambda function bundled using webpa
 1. install using yarn:
 
    ```sh
-   yarn add -D aws-cdk2-webpack-lambda-function aws-cdk-lib aws-cdk constructs webpack webpack-cli
-   # npm i -D aws-cdk2-webpack-lambda-function aws-cdk-lib aws-cdk constructs webpack webpack-cli
+   yarn add -D workflow-test aws-cdk-lib aws-cdk constructs webpack webpack-cli
+   # npm i -D workflow-test aws-cdk-lib aws-cdk constructs webpack webpack-cli
    ```
 
    Note: webpack@5 required.
@@ -72,7 +72,7 @@ This library provides AWS CDK constructs for Lambda function bundled using webpa
 1. your cdk source code:
 
    ```typescript
-   import { WebpackFunction } from "aws-cdk2-webpack-lambda-function";
+   import { WebpackFunction } from "workflow-test";
 
    new WebpackFunction(this, "YourFunction", {
      entry: "your/path/to/function.ts",
