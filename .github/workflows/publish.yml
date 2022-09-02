@@ -1,9 +1,5 @@
-name: build-publish
+name: publish
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
   release:
     types: [ created ]
 
@@ -40,8 +36,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@muhamadto'
       - run: npm install --frozen-lockfile
-      - run: npm run build
-      - run: npm run test
       #      - run: npm version patch -m "Release %s 📣"
       #      - run: git push
       - run: |
