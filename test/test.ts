@@ -1,6 +1,6 @@
-import { SynthUtils } from "@aws-cdk/assert";
-import { App } from "@aws-cdk/core";
-import { TestStack } from "./TestStack";
+import {SynthUtils} from "@aws-cdk/assert";
+import {App} from "aws-cdk-lib";
+import {TestStack} from "./TestStack";
 
 // CDK generate asset with a generated ID that we want to ignore from the comparison
 expect.addSnapshotSerializer({

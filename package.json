@@ -1,6 +1,6 @@
 {
-  "name": "aws-cdk-webpack-lambda-function",
-  "version": "0.6.0",
+  "name": "@muhamadto/aws-cdk2-webpack-lambda-function",
+  "version": "0.3.0",
   "description": "This library provides constructs for Node.js Lambda function bundled using webpack.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,22 +12,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/masahirompp/aws-cdk-webpack-lambda-function.git"
+    "url": "git+https://github.com/muhamadto/aws-cdk2-webpack-lambda-function.git"
   },
   "keywords": [
     "aws-cdk",
     "lambda",
     "webpack"
   ],
-  "author": "Masahiro Onohara <masahirompp@gmail.com> (https://github.com/masahirompp)",
+  "author": "Muhammad Hamadto",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/masahirompp/aws-cdk-webpack-lambda-function/issues"
+    "url": "https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/issues"
   },
-  "homepage": "https://github.com/masahirompp/aws-cdk-webpack-lambda-function#readme",
+  "homepage": "https://github.com/muhamadto/aws-cdk2-webpack-lambda-function#readme",
+  "registry": "https://npm.pkg.github.com",
   "peerDependencies": {
-    "@aws-cdk/aws-lambda": "*",
-    "@aws-cdk/core": "*",
+    "aws-cdk-lib": "*",
+    "aws-cdk": "*",
+    "constructs": "*",
     "webpack": "^5.0.0",
     "webpack-cli": "^4.0.0"
   },
@@ -35,9 +37,10 @@
     "cross-spawn": "^7.0.3"
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.103.0",
-    "@aws-cdk/aws-lambda": "^1.89.0",
-    "@aws-cdk/core": "^1.89.0",
+    "@aws-cdk/assert": "^2.39.1",
+    "aws-cdk-lib": "^2.39.1",
+    "aws-cdk": "2.39.1",
+    "constructs": "^10.1.92",
     "@types/cross-spawn": "^6.0.2",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.0.2",

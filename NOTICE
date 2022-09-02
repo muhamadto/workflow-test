@@ -1,0 +1,3 @@
+This project is based on code written by https://github.com/masahirompp. The original code is (masahirompp/aws-cdk-webpack-lambda-function)[https://github.com/masahirompp/aws-cdk-webpack-lambda-function].
+
+muhamadto added support for AWS CDK V2.

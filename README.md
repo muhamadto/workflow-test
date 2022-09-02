@@ -1,16 +1,23 @@
-# aws-cdk-webpack-lambda-function
+# aws-cdk2-webpack-lambda-function
 
-forked from [@aws-cdk/aws-lambda-nodejs](https://github.com/aws/aws-cdk/tree/master/packages/%40aws-cdk/aws-lambda-nodejs)
+[![build-publish](https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/actions/workflows/ci.yml/badge.svg)](https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/muhamadto/aws-cdk2-webpack-lambda-function/actions/workflows/codeql-analysis.yml)
 
-This library provides constructs for Node.js Lambda function bundled using webpack.
+forked
+from [masahirompp/aws-cdk2-webpack-lambda-function](https://github.com/masahirompp/aws-cdk2-webpack-lambda-function)
+. Please
+find [copyright notice and license](https://github.com/masahirompp/aws-cdk-webpack-lambda-function/blob/master/LICENSE)
+in the original repository.
+
+This library provides AWS CDK constructs for Lambda function bundled using webpack.
 
 ## Quick Start
 
 1. install using yarn:
 
    ```sh
-   yarn add -D aws-cdk-webpack-lambda-function @aws-cdk/core @aws-cdk/aws-lambda webpack webpack-cli
-   # npm i -D aws-cdk-webpack-lambda-function @aws-cdk/core @aws-cdk/aws-lambda webpack webpack-cli
+   yarn add -D aws-cdk2-webpack-lambda-function aws-cdk-lib aws-cdk constructs webpack webpack-cli
+   # npm i -D aws-cdk2-webpack-lambda-function aws-cdk-lib aws-cdk constructs webpack webpack-cli
    ```
 
    Note: webpack@5 required.
@@ -65,7 +72,7 @@ This library provides constructs for Node.js Lambda function bundled using webpa
 1. your cdk source code:
 
    ```typescript
-   import { WebpackFunction } from "aws-cdk-webpack-lambda-function";
+   import { WebpackFunction } from "aws-cdk2-webpack-lambda-function";
 
    new WebpackFunction(this, "YourFunction", {
      entry: "your/path/to/function.ts",
